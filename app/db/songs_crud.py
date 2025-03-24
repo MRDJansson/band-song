@@ -2,9 +2,9 @@ from fastapi import HTTPException
 from ..db.models import SongIn, SongOut
 
 songs = [
-    {"id": 0, "title": "Hatebreed", "artist": "Children of Bodom"},
-    {"id": 1, "title": "Hellfire", "artist": "Lorna Shore"},
-    {"id": 2, "title": "DEMOLISHER", "artist": "Slaughter to Prevail"},
+    {"id": 0, "artist": "Children of Bodom", "formed": 1993, "titles": ["Hate Me!", "Everytime I Die"]},
+    {"id": 1, "artist": "Lorna Shore", "formed": 2010, "titles": ["To the Hellfire", "Pain Remains"]},
+    {"id": 2, "artist": "Slaughter to Prevail", "formed": 2014, "titles": ["DEMOLISHER", "Baba Yaga"]},
 ]
 
 def list_all_songs(artist: str = ""):

@@ -1,8 +1,11 @@
-from sqlmodel import SQLModel, Field
+# from sqlmodel import SQLModel, Field
+from pydantic import BaseModel
+from typing import List
 
-class BaseSong(SQLModel):
-    title: str
+class BaseSong(BaseModel):
+    titles: str
     artist: str
+    formed: int
     
 class SongIn(BaseSong):
     pass
@@ -10,7 +13,7 @@ class SongIn(BaseSong):
 class SongOut(BaseSong):
     id: int
     
-class BandBase(SQLModel):
+class BandBase(BaseModel):
     name: str
     
 class BandIn(BandBase):
@@ -19,5 +22,5 @@ class BandIn(BandBase):
 class BandOut(BandBase):
     id: int
 
-class BandDb(BaseSong, table=True):
-    id: int = Field(default=None, primary_key=True)
+# class BandDb(BaseSong, table=True):
+#     id: int = Field(default=None, primary_key=True)
