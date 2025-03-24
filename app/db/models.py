@@ -1,8 +1,8 @@
 from sqlmodel import SQLModel, Field
 
 class BaseSong(SQLModel):
-    song: str
-    band: str
+    title: str
+    artist: str
     
 class SongIn(BaseSong):
     pass

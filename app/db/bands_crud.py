@@ -2,8 +2,8 @@ from fastapi import HTTPException
 from ..db.models import BandIn, BandOut
 
 bands = [
-    {"id": "name": "Children of Bodom"},
-    {"id": "name": "Lorna Shore"},
+    {"id": 0, "name": "Children of Bodom"},
+    {"id": 1, "name": "Lorna Shore"},
 ]
 
 def list_all_bands(name: str = ""):

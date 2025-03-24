@@ -5,8 +5,8 @@ from ..db import songs_crud
 router = APIRouter(prefix="/songs", tags=["songs"])
 
 @router.get("/", response_model=list[SongOut])
-def list_all_songs(song: str = ""):
-    return songs_crud.list_all_songs(song)
+def list_all_songs(artist: str = ""):
+    return songs_crud.list_all_songs(artist)
 
 @router.get("/{song_id}", response_model=SongOut)
 def list_all_songs_by_id(song_id: int):
